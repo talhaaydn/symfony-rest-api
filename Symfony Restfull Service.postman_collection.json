@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "0ac55741-1d14-4a3d-a72f-f4785a2ec123",
+		"name": "Symfony Restfull Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"talhaaydin\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login_check",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\": 1,\n    \"quantity\": 3,\n    \"address\": \"Yenişehir Mah. Millet Cad. Odak Sit. Pendik/İstanbul\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\": 1,\n    \"address\": \"Yenişehir Mah. Millet Cad. Odak Sit. Pendik/İstanbul\",\n    \"shipping_date\": \"2021-10-09\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show an Order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\": 1,\n    \"address\": \"Yenişehir Mah. Millet Cad. Odak Sit. Pendik/İstanbul\",\n    \"shipping_date\": \"2021-10-09\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\": 1,\n    \"address\": \"Yenişehir Mah. Millet Cad. Odak Sit. Pendik/İstanbul\",\n    \"shipping_date\": \"2021-10-09\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MzM4MTI3MTYsImV4cCI6MTYzMzgxNjMxNiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidGFsaGFheWRpbiJ9.xFTXQumWc-65BU5Kb0EFGi963_iXYtKtZV4cjtDwmZ3AcpD1pM709P98MJLMXTmEINEXypqIbU6lQ7pTu0HcDWmVcAUOjA0E-nnFbJ293fiMgpW67CYKCWyLdu7IB8sFkfJeOIgL7P50slECWnwkauaWbP0UbIq8so5eVXS-8ERnK4AHcOJD1rQbku9yBQQbe0yHGQRr0MGEkB4MwoYmf6vNRB3qSIMLm_6iF2ibPVo8OLYFaG25h5tjMwQSIwytg9Ru3QYrBd3kmPqjcwjVdkTFl1khsuMHtGqp-sMp8nocCOehHMBJAPub1LdVx5OlKbDAkDPr9J_EAeea73hLkg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
